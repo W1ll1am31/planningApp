@@ -39,27 +39,50 @@
       <v-toolbar-title v-text="title"></v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <hello></hello>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
   import Vue from 'vue'
-  import Hello from './components/Hello.vue'
+  import VueRouter from 'vue-router'
+  Vue.use(VueRouter);
 
   export default {
-    components: {
-      hello: Hello
-    },
     data () {
       return {
         cordova: Vue.cordova,
         drawer: false,
         items: [{
           icon: 'home',
-          title: 'TESTING',
+          title: 'Home',
           link: '/'
+        },
+        {
+          icon: 'golf_course',
+          title: 'Goals',
+          link: 'goal'
+        },
+        {
+          icon: 'comment',
+          title: 'Reviews',
+          link: 'reviews'
+        },
+        {
+          icon: 'call_split',
+          title: 'Comparison',
+          link: 'comparison'
+        },
+        {
+          icon: 'memory',
+          title: 'Technical Challenges',
+          link: 'challenges'
+        },
+        {
+          icon: 'photo_library',
+          title: 'Pictures',
+          link: 'pictures'
         }],
         miniVariant: false,
         title: 'Vuetify.js'
@@ -97,7 +120,7 @@
       },
       onLinkClicked: function(item) {
         let link = item.link;
-        console.log(link);
+        this.$router.push(link);
       }
     }
   }
