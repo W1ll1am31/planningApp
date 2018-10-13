@@ -7,5 +7,6 @@ It contains details on what the app will do, how it will look and any challenges
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
 1.	Clone down the repository
 2.	Ensure node and npm are installed and up to date
+3.  Run npm install to install the dependencies
 3.	Use npm run dev to start the node server on port 8080
 4.	Navigate to http://localhost:8080 to view the application
