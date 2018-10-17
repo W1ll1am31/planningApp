@@ -85,7 +85,7 @@
           link: 'pictures'
         }],
         miniVariant: false,
-        title: 'Vuetify.js'
+        title: 'Planning Application'
       }
     },
     created () {
@@ -120,6 +120,7 @@
       },
       onLinkClicked: function(item) {
         let link = item.link;
+        this.drawer = false;
         this.$router.push(link);
       }
     }
