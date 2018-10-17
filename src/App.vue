@@ -39,7 +39,9 @@
       <v-toolbar-title v-text="title"></v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <router-view></router-view>
+      <v-slide-y-transition mode="out-in">
+        <router-view></router-view>
+      </v-slide-y-transition>
     </v-content>
   </v-app>
 </template>
