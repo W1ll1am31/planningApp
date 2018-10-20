@@ -1,4 +1,6 @@
-<template>
+var goal = Vue.component('goal', {
+  template: 
+  `
   <v-container fluid>
     <v-layout column align-center>
       <v-card>
@@ -21,4 +23,5 @@
       </v-card>
     </v-layout>
   </v-container>
-</template>
+  `
+})
