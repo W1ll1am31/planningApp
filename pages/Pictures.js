@@ -44,25 +44,6 @@ v-touch="{
     >
       <v-icon>close</v-icon>
     </v-btn>
-    <v-btn
-      dark
-      top
-      left
-      small
-      fab
-      @click="previousImage()"
-    >
-      <v-icon>arrow_left</v-icon>
-    </v-btn>
-    <v-btn
-      dark
-      top
-      small
-      fab
-      @click="nextImage()"
-    >
-      <v-icon>arrow_right</v-icon>
-    </v-btn>
   </v-img>
 </v-layout>
 </v-dialog>
@@ -82,7 +63,6 @@ v-touch="{
       this.imagePopup = true;
       this.selectedImage = image;
       this.currentImage = this.images.indexOf(image);
-      console.log("viewing " + image);
     },
     nextImage: function() {
       if(this.currentImage == this.images.length-1) {
