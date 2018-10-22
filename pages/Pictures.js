@@ -33,7 +33,7 @@ v-touch="{
     right: () => previousImage()
   }"
   >
-  <v-img v-if="selectedImage" :src="imageDir + images[currentImage]">
+  <v-img :max-height="maxImageHeight" :max-width="maxImageWidth" v-if="selectedImage" :src="imageDir + images[currentImage]">
     <v-btn
       dark
       small
@@ -54,9 +54,22 @@ v-touch="{
       imageDir: "./images/",
       imagePopup: false,
       selectedImage: null,
-      images: ['2.png', '3.png', 'blah.png', 'lines.png'],
-      currentImage: 0
+      images: ['2.png', '3.png', 'blah.png', 'lines.png', "1.png"],
+      currentImage: 0,
+      maxImageHeight: 0,
+      maxImageWidth: 0
     };
+  },
+  watch: {
+    window: {
+      handler() {
+        console.log("changing max height to " + window.innerHeight)
+        this.maxImageHeight = window.innerHeight * 0.90;
+        this.maxImageWidth = this.maxImageHeight * (9/16);
+      },
+      immediate: true,
+      deep: true
+    }
   },
   methods: {
     viewImage: function(image) {
