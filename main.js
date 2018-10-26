@@ -9,7 +9,7 @@ var mainApp = new Vue({
         items: [
             { icon: 'home', title: 'Home', link: 'home' },
             { icon: 'golf_course', title: 'Goals', link: 'goal' },
-            { icon: 'comment', title: 'Reviews', link: 'reviews' },
+            { icon: 'comment', title: 'User Stories', link: 'user-stories' },
             { icon: 'call_split', title: 'Comparison', link: 'comparison' },
             { icon: 'memory', title: 'Technical Challenges', link: 'challenges' },
             { icon: 'photo_library', title: 'Pictures', link: 'pictures' }
