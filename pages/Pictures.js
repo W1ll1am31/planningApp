@@ -7,7 +7,7 @@ var pictures = Vue.component('pictures', {
   <v-flex xs12 sm6 offset-sm3>
     <v-card>
       <v-container fluid>
-        <v-layout row wrap>
+        <v-layout row wrap justify-space-around fill-height>
           <v-flex
             v-for="(image, key) in images"
             :key="key"
@@ -54,7 +54,7 @@ v-touch="{
       imageDir: "./images/",
       imagePopup: false,
       selectedImage: null,
-      images: ['2.png', '3.png', 'blah.png', 'lines.png', "1.png"],
+      images: ["main-screen.png", "add-expense.png", "add-income.png", "add-subscription.png", "set-budget.png"],
       currentImage: 0,
       maxImageHeight: 0,
       maxImageWidth: 0
