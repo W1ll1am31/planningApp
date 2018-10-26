@@ -6,6 +6,11 @@ var comparison = Vue.component('comparison', {
 <h1>Comparison with existing apps</h1>
 <v-card>
   <v-card-title><h3>Mint</h3></v-card-title>
+  <v-card-text>
+    I will be comparing my idea for an app with <a href="https://www.mint.com/">Mint</a>.
+    Mint is a sophisticated finance tracker which is used by millions worldwide
+    Below are a list of features and which app implements them (Mine, Mine or Both)
+  </v-card-text>
   <v-data-table
     :headers="headers"
     :items="features"
@@ -61,11 +66,6 @@ var comparison = Vue.component('comparison', {
           value: false,
           name: 'Calculate credit score',
           app: "Mint",
-        },
-        {
-          value: false,
-          name: 'Tips to reduce spending',
-          app: "Mine",
         },
         {
           value: false,
