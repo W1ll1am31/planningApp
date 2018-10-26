@@ -2,7 +2,8 @@ var pictures = Vue.component('pictures', {
   template: 
   `
   <v-container fluid>
-  <h1>Pictures</h1>
+  <h1>Mock screens for the app</h1>
+  <p>Tap on one of the images, then swipe either way to scroll between them</p>
   <v-layout>
   <v-flex xs12 sm6 offset-sm3>
     <v-card>
@@ -54,7 +55,7 @@ v-touch="{
       imageDir: "./images/",
       imagePopup: false,
       selectedImage: null,
-      images: ["main-screen.png", "add-expense.png", "add-income.png", "add-subscription.png", "set-budget.png"],
+      images: ["main-screen.png", "detailed-expenses.png", "add-expense.png", "add-income.png", "add-subscription.png", "set-budget.png"],
       currentImage: 0,
       maxImageHeight: 0,
       maxImageWidth: 0
@@ -63,7 +64,6 @@ v-touch="{
   watch: {
     window: {
       handler() {
-        console.log("changing max height to " + window.innerHeight)
         this.maxImageHeight = window.innerHeight * 0.90;
         this.maxImageWidth = this.maxImageHeight * (9/16);
       },
